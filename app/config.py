@@ -1,18 +1,8 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-import os
-from app.config import settings  # Import settings from config module
 
 
 class Settings(BaseSettings):
-    
-
-    SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
-
-    if SQLALCHEMY_DATABASE_URL is None:
-    # fallback to local settings if DATABASE_URL not found (for local development)
-         SQLALCHEMY_DATABASE_URL = f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
-
-    
+    # Default values for database connection parameters
     database_hostname: str = "localhost"
     database_port: str = "5432"
     database_password: str = "CHACHU2206"
