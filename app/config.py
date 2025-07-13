@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     database_password: str = "CHACHU2206"
     database_name: str = "fastapi"
     database_username: str = "postgres"
-    secret_key: str = "secretkey1010101"
+    secret_key: str = "Tn_9KbLpAsy4TY0K4Nw0yqTYzMkFwJv1n8tAazV6DQA"
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 60
 
